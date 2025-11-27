@@ -47,9 +47,14 @@ private:
             int pwm_value = static_cast<int>(
                 (limited_rad / MAX_RAD_PER_SEC) * MAX_PWM_VALUE
             );
+
+            // Paso 3.5: Dirección original:
+            if (rad_per_sec < 0) {
+                pwm_value = pwm_value * -1;
+            }
             
             // Paso 4: Aseguramos que el valor final esté en el rango de los PWM, solo devuelve el valor original, el límite inferior o el superior dependiendo si le falta o se pasa. (no debería de pasar pero se deja como seguridad extra)
-            pwm_msg->data[i] = std::clamp(pwm_value, 0, MAX_PWM_VALUE);
+            pwm_msg->data[i] = std::clamp(pwm_value, -255, MAX_PWM_VALUE);
         }
 
         RCLCPP_INFO(this->get_logger(),
