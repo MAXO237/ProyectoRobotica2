@@ -99,6 +99,7 @@ private:
 
             // Casting a int16_t
             pwm_values[i] = static_cast<int16_t>(pwm_calc);
+
         }
 
         // Debug en consola (opcional, puedes comentarlo si llena mucho la pantalla)
