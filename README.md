@@ -9,7 +9,7 @@
 - Crear un espacio de trabajo en la raspberry pi de Paquito, y poner allí el paquete [**paquito_package_cpp**](./paquito_package_cpp).
 - Crear un espacio de trabajo en la computadora local, y poner allí el paquete [**viz_package_cpp**](./viz_package_cpp2).
 - Cargar el archivo [**Esclavo.ino**](./Codigo_Arduino/Esclavo) al Arduino de Paquito.
-- Compilar (**colcon build**) y activar el underlay y overlay (hacer los dos **source**) en los dos espacio de trabajo (el de la computadora local y el del raspberry pi).
+- Compilar (**colcon build**) y activar el underlay y overlay (hacer los dos **source**) en los dos espacios de trabajo (el de la computadora local y el de la raspberry pi).
 ### Dentro de la computadora local
 - En terminal 1, escribir:
   ```bash
